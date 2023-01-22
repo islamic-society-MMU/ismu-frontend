@@ -5,6 +5,7 @@ $white: #fff;
 $green: rgb(64, 208, 38);
 
 $link-transition: all 0.2s ease-in-out;
+$menu-transition: all 0.4s ease-in-out;
 
 @mixin resposive($screen-size) {
   @if ($screen-size == 'desktop') {

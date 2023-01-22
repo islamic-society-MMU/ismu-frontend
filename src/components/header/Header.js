@@ -8,13 +8,8 @@ import logo from './../../assets/images/ismu-logo.png';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuClick = () => {
-    setIsMenuOpen(true);
-  };
-
-  const toggleMenu = () => {
-    if (isMenuOpen) return 'translateX(-100vw)';
-    return 'translateX(0)';
+  const handleMenuClick = (menuState) => {
+    menuState === 'open' ? setIsMenuOpen(true) : setIsMenuOpen(false);
   };
 
   return (
@@ -25,9 +20,15 @@ const Header = () => {
         </Link>
       </div>
       <div className='header-links'>
-        <HeaderLinks transformVal={toggleMenu()} />
+        <HeaderLinks
+          isMenuOpen={isMenuOpen}
+          handleMenuClick={handleMenuClick}
+        />
       </div>
-      <BiMenuAltLeft onClick={handleMenuClick} fontSize='6vmin' />
+      <BiMenuAltLeft
+        onClick={() => handleMenuClick('open')}
+        fontSize='6vmin'
+      />
     </div>
   );
 };
