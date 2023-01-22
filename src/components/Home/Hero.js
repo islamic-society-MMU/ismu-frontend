@@ -1,19 +1,28 @@
 import React from 'react';
-import heroImage from './../../assets/images/background_two.jpeg';
+import desktopHeroImage from './../../assets/images/background_two.jpeg';
+import mobileHeroImage from './../../assets/images/mobile-hero.jpeg';
 
 const Hero = () => {
   return (
     <div className='hero'>
       <div className='hero-img'>
-        <img src={heroImage} alt='Hero' />
+        <picture>
+          <source
+            media='(min-width: 500px)'
+            srcset={desktopHeroImage}
+          />
+          <source
+            media='(max-width: 400px)'
+            srcset={mobileHeroImage}
+          />
+          <img src={desktopHeroImage} alt='Hero' />
+        </picture>
       </div>
 
       <div className='hero-text'>
         <h1>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Ipsum, doloremque!
+          Want to learn and grow together as one ummah in islam?
         </h1>
-        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
         <div className='hero-btns'>
           <button>join us</button>
           <button>donate</button>

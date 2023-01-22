@@ -9,6 +9,13 @@
 }
 
 body {
+  font-family: $font-family;
+  // background: linear-gradient(
+  //   to bottom,
+  //   rgba(20, 23, 40, 0.3),
+  //   rgba(20, 23, 40, 1)
+  // );
+  // background-color: $background;
 }
 
 .container {
@@ -16,7 +23,6 @@ body {
   // height: fit-content;
   // width: 90%;
   margin: 0 auto;
-  font-family: $font-family;
 }
 
 ul li {

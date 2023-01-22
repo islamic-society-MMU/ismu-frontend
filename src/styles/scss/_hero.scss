@@ -12,11 +12,12 @@
     display: inline-block;
     width: 100%;
     height: 100%;
-    // background: linear-gradient(
-    //   to right,
-    //   rgba(0, 0, 0, 0.5),
-    //   rgba(0, 0, 0, 0.1)
-    // );
+    background: linear-gradient(
+      to bottom,
+      rgba(20, 23, 40, 0.2),
+      rgba(20, 23, 40, 0.2),
+      rgba(20, 23, 40, 1)
+    );
     z-index: 2;
 
     img {
@@ -30,7 +31,7 @@
   .hero-text {
     max-width: 1300px;
     position: absolute;
-    top: 20%;
+    top: 30%;
     bottom: 20%;
     padding: 2vmin 3vmin;
     display: flex;
@@ -49,6 +50,10 @@
         border: 2px solid $green;
         text-transform: capitalize;
         transition: $link-transition;
+
+        &:last-child {
+          display: none;
+        }
 
         &:first-child {
           margin-right: 5vmin;
@@ -73,10 +78,23 @@
     height: 80vh;
     height: 600px;
 
+    .hero-img {
+      // background-color: white;
+    }
+
     .hero-text {
+      top: 20%;
       bottom: 30%;
-      right: 30%;
+      right: 50%;
       left: 8%;
+
+      .hero-btns {
+        button {
+          &:last-child {
+            display: unset;
+          }
+        }
+      }
 
       h1 {
         font-size: 40px;

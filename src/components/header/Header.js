@@ -17,25 +17,36 @@ const Header = () => {
     menuState === 'open' ? setIsMenuOpen(true) : setIsMenuOpen(false);
   };
 
+  const toggleOverlay = () => {
+    if (isMenuOpen) return 'block';
+    return 'none';
+  };
+
   return (
-    <div className='header'>
-      <div className='logo'>
-        <Link>
-          <img src={logo} alt='Ismu Logo' />
-        </Link>
-      </div>
-      <div className='header-links'>
-        <HeaderLinks
-          isMenuOpen={isMenuOpen}
-          handleMenuClick={handleMenuClick}
+    <>
+      <div className='header'>
+        <div className='logo'>
+          <Link>
+            <img src={logo} alt='Ismu Logo' />
+          </Link>
+        </div>
+        <div className='header-links'>
+          <HeaderLinks
+            isMenuOpen={isMenuOpen}
+            handleMenuClick={handleMenuClick}
+          />
+        </div>
+        <BiMenuAltLeft
+          onClick={() => handleMenuClick('open')}
+          className='menu-icon'
         />
       </div>
-      <BiMenuAltLeft
-        onClick={() => handleMenuClick('open')}
-        fontSize='6vmin'
-        className='menu-icon'
-      />
-    </div>
+      <div
+        class='overlay'
+        style={{ display: toggleOverlay() }}
+        onClick={() => handleMenuClick('close')}
+      ></div>
+    </>
   );
 };
 
