@@ -9,24 +9,24 @@ import {
 import { FiActivity } from 'react-icons/fi';
 // import { MdOutlineAppRegistration } from 'react-icons/md';
 
-const HeaderLinks = () => {
+const HeaderLinks = ({ transformVal }) => {
   return (
-    <ul>
+    <ul style={{ transform: { transformVal } }}>
       <li>
-        <Link to='/'>
+        <Link to='/' className='link'>
           <AiOutlineHome className='link-icon' />
           <span>home</span>
         </Link>
       </li>
       <li>
-        <Link to='/'>
-          <AiOutlineInfoCircle className='link-icon'/>
+        <Link to='/' className='link'>
+          <AiOutlineInfoCircle className='link-icon' />
           <span>about</span>
         </Link>
       </li>
       <li>
-        <Link to='/'>
-          <AiOutlineContacts className='link-icon'/>
+        <Link to='/' className='link'>
+          <AiOutlineContacts className='link-icon' />
           <span>contact</span>
         </Link>
       </li>
@@ -37,8 +37,8 @@ const HeaderLinks = () => {
         </Link>
       </li> */}
       <li>
-        <Link to='/'>
-          <FiActivity className='link-icon'/>
+        <Link to='/' className='link'>
+          <FiActivity className='link-icon' />
           <span>activities</span>
         </Link>
       </li>

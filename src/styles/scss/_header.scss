@@ -35,8 +35,8 @@
         }
 
         &:hover {
-          color: $blue;
-          border-bottom: 3px solid $blue;
+          color: $green;
+          border-bottom: 3px solid $green;
           transition: $link-transition;
           cursor: pointer;
         }
@@ -45,7 +45,8 @@
   }
 }
 
-@media (max-width: 750px) {
+// @media (max-width: 750px) {
+@include resposive(tablet) {
   .header {
     flex-direction: row-reverse;
 
@@ -55,8 +56,37 @@
         top: 0;
         left: 0;
         bottom: 0;
-        width: 50%;
+        width: 60%;
         flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        background-color: antiquewhite;
+        z-index: 5;
+        padding: 0;
+        padding-top: 3vmin;
+
+        li {
+          width: 70%;
+          margin-top: 5vmin;
+          align-items: center;
+          border-radius: 10px;
+
+          &:hover {
+            background-color: aquamarine;
+          }
+
+          .link {
+            display: flex;
+            align-items: center;
+            padding: 2vmin 3vmin;
+
+            .link-icon {
+              display: unset;
+              margin-right: 5vmin;
+              font-size: x-large;
+            }
+          }
+        }
       }
     }
   }
