@@ -12,14 +12,8 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 const HeaderLinks = ({ isMenuOpen, handleMenuClick }) => {
   const toggleMenu = () => {
-    if (isMenuOpen) {
-      console.log('open');
-
-      return 'translateX(0)';
-    } else {
-      console.log('close');
-      return 'translateX(-100vw)';
-    }
+    if (isMenuOpen) return 'translateX(0)';
+    return 'translateX(-100vw)';
   };
 
   return (
