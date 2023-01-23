@@ -4,17 +4,16 @@ import {
   MdOutlineLightMode,
 } from 'react-icons/md';
 
-const Theme = () => {
-  const [theme, setTheme] = useState(true);
+const Theme = ({ toggleTheme, theme }) => {
+  //   const [theme, setTheme] = useState(true);
 
-  const toggleTheme = () => {
-    setTheme(!theme);
-    moveThemeSwitch();
-    //TODO Change theme
-  };
+  // const toggleTheme = () => {
+  //   moveThemeSwitch();
+  //   //TODO Change theme
+  // };
 
   const moveThemeSwitch = () => {
-    if (theme) return '0';
+    if (theme === 'light') return '0';
     return '50%';
   };
   return (

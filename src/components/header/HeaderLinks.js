@@ -12,20 +12,25 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import Theme from './Theme';
 // import { MdOutlineAppRegistration } from 'react-icons/md';
 
-const HeaderLinks = ({ isMenuOpen, handleMenuClick }) => {
+const HeaderLinks = ({
+  isMenuOpen,
+  handleMenuClick,
+  toggleTheme,
+  theme,
+}) => {
   const toggleMenu = () => {
     if (isMenuOpen) return 'translateX(0)';
     return 'translateX(-100vw)';
   };
 
   return (
-    <ul style={{ transform: toggleMenu() }}>
+    <ul style={{ transform: toggleMenu() }} className={theme}>
       <li>
         <AiOutlineCloseCircle
           className='close-icon'
           onClick={() => handleMenuClick('close')}
         />
-        <Theme />
+        <Theme toggleTheme={toggleTheme} theme={theme} />
       </li>
       <li>
         <Link to='/' className='link'>

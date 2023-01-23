@@ -5,7 +5,7 @@ import { BiMenuAltLeft } from 'react-icons/bi';
 import HeaderLinks from './HeaderLinks';
 import logo from './../../assets/images/ismu-logo.png';
 
-const Header = () => {
+const Header = ({ toggleTheme, theme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -34,6 +34,8 @@ const Header = () => {
           <HeaderLinks
             isMenuOpen={isMenuOpen}
             handleMenuClick={handleMenuClick}
+            toggleTheme={toggleTheme}
+            theme={theme}
           />
         </div>
         <BiMenuAltLeft
