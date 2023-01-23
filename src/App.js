@@ -14,7 +14,7 @@ const App = () => {
     <div className={`container ${theme}`}>
       <Header toggleTheme={toggleTheme} theme={theme}/>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home theme={theme}/>} />
       </Routes>
       <main className='App'></main>
     </div>

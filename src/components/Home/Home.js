@@ -2,11 +2,11 @@ import React from 'react';
 import Hero from './Hero';
 import Overview from './Overview';
 
-const Home = () => {
+const Home = ({ theme }) => {
   return (
     <div className='home'>
       <Hero />
-      <Overview />
+      <Overview theme={theme} />
     </div>
   );
 };

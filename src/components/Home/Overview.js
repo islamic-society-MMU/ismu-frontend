@@ -6,11 +6,11 @@ import donorImg from './../../assets/images/donor.png';
 import eventImg from './../../assets/images/event-illustration.png';
 import illustrationImg from './../../assets/images/islam-illustration.png';
 
-const Overview = () => {
+const Overview = ({ theme }) => {
   return (
-    <section className='overview'>
-      {/* <div className='overview-item'>
-        <img src={donationImg} alt='donation' />
+    <section className={`overview ${theme}`}>
+      <div className='overview-item'>
+        <img src={illustrationImg} alt='Islam illustration' />
         <div className='overview-details'>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -19,70 +19,59 @@ const Overview = () => {
           </p>
           <button>learn more</button>
         </div>
-      </div> */}
-      <div className='overview-item'>
-        <img src={illustrationImg} alt='Islam illustration' />
-        <div className='overview-details'>
-          <h4>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Obcaecati, nemo rerum. Tempora mollitia distinctio eum
-            ipsa saepe provident aut nostrum.
-          </h4>
-          <button>learn more</button>
-        </div>
       </div>
       <div className='overview-item'>
         <img src={prayerImg} alt='Prayer' />
         <div className='overview-details'>
-          <h4>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Obcaecati, nemo rerum. Tempora mollitia distinctio eum
             ipsa saepe provident aut nostrum.
-          </h4>
+          </p>
           <button>learn more</button>
         </div>
       </div>
       <div className='overview-item'>
         <img src={eventImg} alt='event illustration' />
         <div className='overview-details'>
-          <h4>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Obcaecati, nemo rerum. Tempora mollitia distinctio eum
             ipsa saepe provident aut nostrum.
-          </h4>
+          </p>
           <button>learn more</button>
         </div>
       </div>
       <div className='overview-item'>
         <img src={sereneImg} alt='Serene' />
         <div className='overview-details'>
-          <h4>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Obcaecati, nemo rerum. Tempora mollitia distinctio eum
             ipsa saepe provident aut nostrum.
-          </h4>
+          </p>
           <button>learn more</button>
         </div>
       </div>
       <div className='overview-item'>
         <img src={donorImg} alt='donor' />
         <div className='overview-details'>
-          <h4>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Obcaecati, nemo rerum. Tempora mollitia distinctio eum
             ipsa saepe provident aut nostrum.
-          </h4>
+          </p>
           <button>learn more</button>
         </div>
       </div>
       <div className='overview-item'>
         <img src={duaImg} alt='Dua' />
         <div className='overview-details'>
-          <h4>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Obcaecati, nemo rerum. Tempora mollitia distinctio eum
             ipsa saepe provident aut nostrum.
-          </h4>
+          </p>
           <button>learn more</button>
         </div>
       </div>
