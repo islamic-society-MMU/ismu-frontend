@@ -5,16 +5,12 @@ import Home from './components/Home/Home';
 import { useState } from 'react';
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
-
-  const toggleTheme = () => {
-    return setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+  
   return (
-    <div className={`container ${theme}`}>
-      <Header toggleTheme={toggleTheme} theme={theme}/>
+    <div className={`container`}>
+      <Header />
       <Routes>
-        <Route path='/' element={<Home theme={theme}/>} />
+        <Route path='/' element={<Home/>} />
       </Routes>
       <main className='App'></main>
     </div>
