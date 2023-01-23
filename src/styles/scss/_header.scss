@@ -44,8 +44,49 @@
         display: flex;
         border: 3px solid transparent;
 
+        .dark {
+          color: $white;
+          background-color: $white;
+          border-color: $white;
+        }
+
+        .light {
+          color: $background;
+          background-color: $background;
+          border-color: $background;
+        }
+
+        &:first-child {
+          &:hover {
+            background-color: transparent;
+            color: unset;
+            border-bottom-color: transparent;
+          }
+        }
+
         .theme-icons {
-          display: none;
+          width: 5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          border-width: 2px;
+          border-top: 0;
+          border-bottom: 0;
+          border-style: solid;
+          border-radius: 1vmin;
+          font-size: 4vmin;
+
+          button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            border: none;
+            border-radius: 0.6vmin;
+            transition: $menu-transition;
+          }
         }
 
         .link-icon {
@@ -129,6 +170,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
 
             &:hover {
               background-color: transparent;
@@ -136,39 +178,13 @@
 
             .theme-icons {
               width: 40%;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
               font-size: 6vmin;
               border-radius: 2vmin;
               padding: 1vmin 2vmin;
-              position: relative;
-              border-width: 1px;            
-              border-style: solid;
-
-              .dark {
-                color: $white;
-                background-color: $white;
-                border-color: $white;
-              }
-
-              .light {
-                color: $background;
-                background-color: $background;
-                border-color: $background;
-              }
+              
 
               button {
-                top: 0;
-                left: 0;
-                width: 50%;
-                height: 100%;
-                border: none;
-                // background-color: green;
-                background-color: inherit;
                 border-radius: 1.6vmin;
-                position: absolute;
-                transition: $menu-transition;
               }
             }
           }

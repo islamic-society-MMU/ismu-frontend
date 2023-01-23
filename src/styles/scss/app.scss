@@ -2,6 +2,8 @@
 @import './header';
 @import './config';
 @import './hero';
+@import './overview';
+
 * {
   padding: 0;
   margin: 0;
@@ -10,6 +12,7 @@
 
 body {
   font-family: $font-family;
+  overflow-x: hidden;
   // background: linear-gradient(
   //   to bottom,
   //   rgba(20, 23, 40, 0.3),
