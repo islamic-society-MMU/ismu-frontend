@@ -44,6 +44,10 @@
         display: flex;
         border: 3px solid transparent;
 
+        .theme-icons {
+          display: none;
+        }
+
         .link-icon {
           display: none;
         }
@@ -101,7 +105,6 @@
         align-items: flex-start;
         background-color: inherit;
         color: inherit;
-        // color: $background;
         z-index: 5;
         padding: 0;
         padding-top: 3vmin;
@@ -140,16 +143,29 @@
               border-radius: 2vmin;
               padding: 1vmin 2vmin;
               position: relative;
-              border: 1px solid green;
+              border-width: 1px;            
+              border-style: solid;
+
+              .dark {
+                color: $white;
+                background-color: $white;
+                border-color: $white;
+              }
+
+              .light {
+                color: $background;
+                background-color: $background;
+                border-color: $background;
+              }
 
               button {
-                // width: 100%;
                 top: 0;
                 left: 0;
                 width: 50%;
                 height: 100%;
                 border: none;
-                background-color: green;
+                // background-color: green;
+                background-color: inherit;
                 border-radius: 1.6vmin;
                 position: absolute;
                 transition: $menu-transition;

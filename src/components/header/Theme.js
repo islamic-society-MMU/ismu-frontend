@@ -10,12 +10,12 @@ const Theme = ({ toggleTheme, theme }) => {
     if (theme === 'light') return '0';
     return '50%';
   };
-  
+
   return (
     <div className='theme-icons' onClick={toggleTheme}>
       <MdOutlineDarkMode className='theme-icon' />
       <MdOutlineLightMode className='theme-icon' />
-      <button style={{ left: moveThemeSwitch() }}></button>
+      <button style={{ left: moveThemeSwitch() }} className={theme}></button>
     </div>
   );
 };
