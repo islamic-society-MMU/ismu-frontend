@@ -3,11 +3,11 @@ import Footer from '../Footer/Footer';
 import Hero from './Hero';
 import Overview from './Overview';
 
-const Home = ({ theme }) => {
+const Home = () => {
   return (
     <div className='home'>
       <Hero />
-      <Overview theme={theme} />
+      <Overview />
       <Footer />
     </div>
   );
