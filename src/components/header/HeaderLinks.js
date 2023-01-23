@@ -9,14 +9,11 @@ import {
 // import { BiDonateHeart } from 'react-icons/bi';
 import { FiActivity } from 'react-icons/fi';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import Theme from './Theme';
 // import { MdOutlineAppRegistration } from 'react-icons/md';
 
 const HeaderLinks = ({
   isMenuOpen,
   handleMenuClick,
-  toggleTheme,
-  theme,
 }) => {
   const toggleMenu = () => {
     if (isMenuOpen) return 'translateX(0)';
@@ -24,14 +21,13 @@ const HeaderLinks = ({
   };
 
   return (
-    <ul style={{ transform: toggleMenu() }} className={theme}>
+    <ul style={{ transform: toggleMenu() }}>
       <li>
         <AiOutlineCloseCircle
           className='close-icon'
           onClick={() => handleMenuClick('close')}
         />
-        <Theme toggleTheme={toggleTheme} theme={theme} />
-      </li>
+              </li>
       <li>
         <Link to='/' className='link'>
           <AiOutlineHome className='link-icon' />
