@@ -64,6 +64,42 @@
   .overview {
     .overview-item {
       flex-direction: row;
+      gap: 14vw;
+      padding: 5vw;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      img {
+        width: unset;
+        height: 30vw;
+      }
+
+      .overview-details {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0.8vw;
+        padding-right: 3vw;
+        width: 50%;
+
+        button {
+          margin-top: 6vw;
+          border-width: 1px;
+          padding: 1.8vmin 4vmin;
+          font-size: 2vmin;
+          border-radius: 1vmin;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .overview {
+    .overview-item {
+      flex-direction: row;
       gap: 14vmin;
       padding: 5vmin 25vmin;
 
