@@ -44,7 +44,7 @@ const Header = ({ toggleTheme, theme }) => {
         />
       </div>
       <div
-        class='overlay'
+        className='overlay'
         style={{ display: toggleOverlay() }}
         onClick={() => handleMenuClick('close')}
       ></div>

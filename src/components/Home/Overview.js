@@ -1,5 +1,5 @@
 import React from 'react';
-import donationImg from './../../assets/images/donation.jpg';
+// import donationImg from './../../assets/images/donation.jpg';
 import donorImg from './../../assets/images/donor.jpg';
 import eventImg from './../../assets/images/event-illustration.png';
 import illustrationImg from './../../assets/images/islam-illustration.webp';

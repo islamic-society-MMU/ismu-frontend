@@ -9,11 +9,11 @@ const Hero = () => {
         <picture>
           <source
             media='(min-width: 500px)'
-            srcset={desktopHeroImage}
+            srcSet={desktopHeroImage}
           />
           <source
             media='(max-width: 400px)'
-            srcset={mobileHeroImage}
+            srcSet={mobileHeroImage}
           />
           <img src={desktopHeroImage} alt='Hero' />
         </picture>
