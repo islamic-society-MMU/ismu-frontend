@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import fixedNav from './fixedNav';
 import { BiMenuAltLeft } from 'react-icons/bi';
 
 import HeaderLinks from './HeaderLinks';
@@ -12,6 +13,10 @@ const Header = ({ toggleTheme }) => {
     const screenWidth = window.innerWidth;
     if (screenWidth > 750) setIsMenuOpen(true);
   }, []);
+
+  useEffect(() => {
+    fixedNav();
+  });
 
   const handleMenuClick = (menuState) => {
     menuState === 'open' ? setIsMenuOpen(true) : setIsMenuOpen(false);
@@ -35,7 +40,6 @@ const Header = ({ toggleTheme }) => {
             isMenuOpen={isMenuOpen}
             handleMenuClick={handleMenuClick}
             toggleTheme={toggleTheme}
-           
           />
         </div>
         <BiMenuAltLeft
