@@ -1,9 +1,6 @@
 @import './variables';
 @import './header';
-@import './config';
 @import './hero';
-@import './overview';
-@import './footer';
 
 * {
   padding: 0;
@@ -20,18 +17,8 @@ body {
   //   rgba(20, 23, 40, 1)
   // );
   // background-color: $background;
+  background-color: white;
 
-  .dark {
-    color: $white;
-    background-color: $background;
-    box-shadow: 2px 10px 5px 0px rgba($white, 0.12);
-  }
-
-  .light {
-    color: $background;
-    background-color: $white;
-    box-shadow: 2px 10px 5px 0px rgba($background, 0.12);
-  }
 }
 
 .container {
