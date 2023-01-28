@@ -1,5 +1,4 @@
 import one from "../assets/images/2.jpeg"
-import two from "../assets/images/1.jpeg"
 
 const Cards = () => {
     const images = [
@@ -18,7 +17,7 @@ const Cards = () => {
             id:2
         },
         {
-            src:two, 
+            src:one, 
             h3:"Inspiration",
             content:"We inspire people to plant, nurture and celebrate trees.",
             alt:"inspire", 
