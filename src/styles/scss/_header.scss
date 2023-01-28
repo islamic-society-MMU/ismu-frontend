@@ -60,6 +60,18 @@
   }
 }
 
+.scroll-down .header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+
 .overlay {
   display: none;
 }
@@ -137,7 +149,22 @@
     }
   }
 
+  .scroll-down
+
+  .scroll-down .header {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  .scroll-up .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+  }
+
   .overlay {
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -147,16 +174,4 @@
     background-color: rgba(0, 0, 0, 0.8);
     transition: $menu-transition;
   }
-}
-
-.scroll-down .header {
-  transform: translate3d(0, -100%, 0);
-}
-
-.scroll-up .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
 }
