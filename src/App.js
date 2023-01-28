@@ -16,6 +16,7 @@ function App() {
     <div className='app-container'>
       <Header toggleMenu={toggleMenu} />
       <Home />
+      <div className='overlay' onClick={toggleMenu}></div>
     </div>
   );
 }
