@@ -1,0 +1,21 @@
+// font
+@font-face {
+    font-family: lato;
+    src: url(../../font/Lato-Regular.ttf);
+}
+
+$lato:lato;
+
+// colors
+$green:rgb(86, 161, 86);
+$white:whitesmoke;
+
+@mixin responsive($breakpoint){
+    @if ($breakpoint == 'tablet'){
+        @media screen and (min-width:768px) { @content }
+    };
+
+    @if ($breakpoint == 'mobile'){
+        @media screen and (max-width:425px) { @content }
+    };
+}

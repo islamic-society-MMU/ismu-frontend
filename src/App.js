@@ -1,19 +1,25 @@
-import Header from './components/header/Header';
-import { Route, Routes } from 'react-router-dom';
-import './styles/css/app.min.css';
-import Home from './components/Home/Home';
+import { useState } from 'react';
+import './assets/styles/css/app.css';
+import Header from './header/Header';
+import Home from './home/Home';
 
-const App = () => {
-  
+function App() {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const body = document.body;
+
+  const toggleMenu = () => {
+    body.classList.toggle('menu-open');
+    setMenuIsOpen(!menuIsOpen);
+  };
+
   return (
-    <div className={`container`}>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home/>} />
-      </Routes>
-      <main className='App'></main>
+    <div className='app-container'>
+      <Header toggleMenu={toggleMenu} />
+      <Home />
+      <div className='overlay' onClick={toggleMenu}></div>
+      
     </div>
   );
-};
+}
 
 export default App;

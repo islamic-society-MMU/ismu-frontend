@@ -1,0 +1,31 @@
+@import './variables';
+@import './header';
+@import './footer';
+@import './home';
+
+
+.app-container{
+    font-family: $lato;
+    width: 90%;
+    transform: translateX( 5% );
+
+    button{
+        background: transparent;
+        border: 1px solid $green;
+        padding: 10px;
+
+        font-size: 15px;
+        font-family: lato;
+
+        @include responsive(mobile){
+            background-color: $green;
+        }
+
+        &:hover{
+            background-color: $green;
+            cursor: pointer;
+            transition: .3s ease-in;
+        }
+    }
+
+}
