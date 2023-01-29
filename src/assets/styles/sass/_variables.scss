@@ -9,6 +9,7 @@ $lato:lato;
 // colors
 $green:rgb(86, 161, 86);
 $white:whitesmoke;
+$black:rgba(0, 0, 0, .5);
 
 @mixin responsive($breakpoint){
     @if ($breakpoint == 'tablet'){
