@@ -8,7 +8,12 @@ const Hero = () => {
           <h1>
             Want to learn and grow together as one ummah in islam?
           </h1>
-          <button>join us</button>
+          <li>
+            <button>Join us</button>
+          </li>
+          <li>
+            <button>Donate</button>
+          </li>
         </div>
       </div>
     );

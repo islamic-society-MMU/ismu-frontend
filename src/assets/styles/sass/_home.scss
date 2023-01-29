@@ -22,11 +22,25 @@
             margin-left: -85px;
             height: 85vh;
         }
+
+        li{
+            display: inline-flex;
+            margin-right: 20px;
+            
+            &:nth-of-type(1){
+                background-color: $green;
+            }
+
+            @include responsive(mobile){
+                &:nth-of-type(1){
+                    display: none;
+                }
+            }
+        }
         button{
-            width: 40%;
-            background: $green;
             color: $white;
             padding: 15px;
+            width: 12pc;
         }
 
         @include responsive(mobile){
@@ -41,7 +55,7 @@
                 font-size: 18px;
             }
             button{
-                width: 100%;
+                width: 20pc;
                 margin-top: 20px;
                 padding: 10px;
             }
